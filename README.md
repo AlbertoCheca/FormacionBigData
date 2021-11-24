@@ -87,7 +87,9 @@ deberiamos ver una lista de pares palabra,numero de ocurrencias
     zwaggered	1
 
 
-
+---------------
+(IGNORAR )
+Markdown documentation
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
 look like:
