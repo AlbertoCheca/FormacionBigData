@@ -88,6 +88,55 @@ deberiamos ver una lista de pares palabra,numero de ocurrencias
 
 
 ---------------
+
+## Spark
+
+-----
+#### Sparkbits
+
+
+Ejecutamos la spark shell y trabajaremos dentro de ella
+
+>spark-shell
+
+Creamos la RDD a partir del texto **relato.txt""
+
+> val  relato = sc.textFile("file:/home/cloudera/BIT/data/relato.txt")
+
+contamos cuantos caracteres hay
+
+>relato.count()
+
+mostramos los datos del fichero colecteando todo sin restringir
+
+>relato.collect()
+
+Mostramos en contenido pero con las lineas haciendo print a cada linea por separado
+
+>relato.foreach(println)
+
+### ejercicio 2
+Cargamos un log (al crear el val creamos el objeto, en este caso es un string que es la direccion del fichero)
+
+>val log= "file:/home/cloudera/BIT/data/weblogs/2013-09-15.log"
+
+Colocamos el valor del fichero
+
+> val logs = sc.textFile(log)
+
+Sleccionamos las lineas que contienen .jpg
+
+>val jpglogs = logs.filter(x=>x.contains(".jpg"))
+
+Mostramos las 5 primeras lineas
+
+>jpglogs.take 5
+
+Podemos anidar los metodos, aqui almaccenamos el numero de lineas de jpglogs
+
+>val jpglogs2 = jpglogs.count()
+
+
 (IGNORAR )
 Markdown documentation
 
