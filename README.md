@@ -136,6 +136,15 @@ Podemos anidar los metodos, aqui almaccenamos el numero de lineas de jpglogs
 
 >val jpglogs2 = jpglogs.count()
 
+Ahora comenzamos a usar una de las funciones mas importantes de Spark map,  esta se aplica a cada linea del RDD
+
+En este ejemplo calculamos la longitud de cada una de las 5 primeras lineas
+
+>logs.map(x=>x.length).take(5)
+
+    scala> logs.map(x=>x.length).take(5)
+    res0: Array[Int] = Array(141, 134, 140, 133, 143)
+
 
 (IGNORAR )
 Markdown documentation
